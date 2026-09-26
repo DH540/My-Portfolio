@@ -1,4 +1,4 @@
-import heroPhoto from "../../assets/IMG_5642.jpg";
+import heroPhoto from "../../assets/IMG_5642.JPG";
 
 function Hero() {
   return (
