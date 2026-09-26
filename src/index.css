@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  --color-navy: #1A2B4C;
+  --color-accent: #F5A623;
+
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}

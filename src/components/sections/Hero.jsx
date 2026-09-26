@@ -2,15 +2,15 @@ import heroPhoto from "../../assets/IMG_5642.jpg";
 
 function Hero() {
   return (
-    <section id="home" className="bg-neutral-900 text-white px-6 pt-32 py-20">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+    <section id="home" className="bg-[var(--color-navy)] text-white pt-32 py-20">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-6">
         <div className="max-w-xl">
-          <h1 className="text-5xl font-bold mb-4">Hi! I'm Dylan</h1>
-          <p className="text-neutral-300 mb-6">
+          <h1 className="font-raleway font-semibold text-7xl font-bold mb-4">Hi! I'm Dylan</h1>
+          <p className="font-mono text-neutral-300 mb-6 text-2xl">
             A graduating Computer Science student focusing on team
             collaboration and project management.
           </p>
-          <p className="text-neutral-400 text-sm">Metro Manila, Philippines</p>
+          <p className="font-mono text-neutral-400 text-sm">Metro Manila, Philippines</p>
         </div>
 
         <div className="w-80 h-80 shrink-0 border-4 border-neutral-600 rounded-full overflow-hidden">

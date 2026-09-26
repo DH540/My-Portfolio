@@ -2,14 +2,14 @@ import { socials } from "../../data/socials";
 
 function Footer() {
   return (
-    <footer id="contact" className="bg-black text-white">
-      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <footer id="contact" className="bg-neutral-800 text-white">
+      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6 bg-neutral-800">
         <div className="flex items-center gap-3 text-left">
           <p className="font-bold text-xl">DH</p>
           
             <div>
-              <p className="font-semibold">Dylan Hope Salazar</p>
-              <p className="text-sm text-neutral-400">Metro Manila, Philippines</p>
+              <p className="font-raleway font-semibold">Dylan Hope Salazar</p>
+              <p className="font-mono text-sm text-neutral-400">Metro Manila, Philippines</p>
             </div>
         </div>
 
@@ -32,14 +32,14 @@ function Footer() {
           </a>
           <a
             href={`mailto:${socials.email}`}
-            className="bg-orange-400 text-neutral-900 font-semibold px-4 py-2 hover:bg-orange-300 transition-colors"
+            className="bg-orange-400 text-neutral-900 font-raleway font-semibold px-4 py-2 hover:bg-orange-300 transition-colors"
           >
             Email Me
           </a>
         </div>
       </div>
 
-      <div className="border-t border-neutral-800 text-center text-xs text-neutral-500 py-4">
+      <div className="bg-neutral-900 border-t border-neutral-800 text-center text-xs text-neutral-500 py-4">
         © 2026 Dylan Hope Salazar
       </div>
     </footer>
