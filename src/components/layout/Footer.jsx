@@ -18,17 +18,17 @@ function Footer() {
             href={socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 border border-neutral-600 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+            className="w-10 h-10 flex justify-center hover:border border-neutral-600 "
           >
-            GH
+          <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="GitHub" className="w-9 h-9" />
           </a>
           <a
             href={socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 border border-neutral-600 flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+            className="w-10 h-10 flex justify-center hover:border border-neutral-600 "
           >
-            IN
+          <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png" alt="LinkedIn" className="w-9 h-9" />
           </a>
           <a
             href={`mailto:${socials.email}`}

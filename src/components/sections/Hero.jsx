@@ -1,4 +1,4 @@
-import heroPhoto from "../../assets/hero.png";
+import heroPhoto from "../../assets/IMG_5642.jpg";
 
 function Hero() {
   return (
@@ -13,7 +13,7 @@ function Hero() {
           <p className="text-neutral-400 text-sm">Metro Manila, Philippines</p>
         </div>
 
-        <div className="w-64 h-64 shrink-0 border-4 border-neutral-600 rounded-full overflow-hidden">
+        <div className="w-80 h-80 shrink-0 border-4 border-neutral-600 rounded-full overflow-hidden">
           <img
             src={heroPhoto}
             alt="Dylan Hope Salazar"

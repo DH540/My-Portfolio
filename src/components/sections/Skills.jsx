@@ -1,9 +1,9 @@
 import { skillCategories } from "../../data/skills";
+import BouncingLogos from "../skills/BouncingLogos";
 
 function Skills() {
-  const softwareDev = skillCategories.find((c) => c.id === "software-development");
-  const projectMgmt = skillCategories.find((c) => c.id === "project-management");
-  const otherTools = skillCategories.find((c) => c.id === "other-tools");
+    const projectMgmt = skillCategories.find((c) => c.id === "project-management");
+  const technicalTools = skillCategories.find((c) => c.id === "technical-tools");
 
   return (
     <section id="skills" className="bg-white text-neutral-900 px-6 py-20">
@@ -16,43 +16,33 @@ function Skills() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Left column: Software Development */}
-          <div className="border border-neutral-300 p-6 relative">
+          <div className="border border-neutral-300 p-6 relative min-h-80">
             <h3 className="absolute -top-3 left-4 bg-white px-2 text-sm font-semibold uppercase tracking-wide">
-              {softwareDev.title}
+              {projectMgmt.title}
             </h3>
-            <ul className="space-y-2 text-neutral-600 pt-2">
-              {softwareDev.items.map((item, i) => (
-                <li key={i}>{item}</li>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {projectMgmt.items.map((item, i) => (
+                <span
+                  key={i}
+                  className="border border-neutral-300 rounded-full px-4 py-2 text-lg text-neutral-600 bg-white hover:bg-neutral-900 hover:text-white transition-colors cursor-default"
+                >
+                  {item}
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Right column: Project Management + Other Tools */}
-          <div className="grid grid-rows-2 gap-6">
-            <div className="border border-neutral-300 p-6 relative">
-              <h3 className="absolute -top-3 left-4 bg-white px-2 text-sm font-semibold uppercase tracking-wide">
-                {projectMgmt.title}
-              </h3>
-              <ul className="space-y-2 text-neutral-600 pt-2">
-                {projectMgmt.items.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
+          {/* Right column: Technical Tools*/}
+          <div className="border border-neutral-300 p-6 relative h-full">
+            <h3 className="absolute -top-3 left-4 bg-white px-2 text-sm font-semibold uppercase tracking-wide">
+              {technicalTools.title}
+            </h3>
+            <div className="h-64">
+              <BouncingLogos items={technicalTools.items} />
             </div>
-
-            <div className="border border-neutral-300 p-6 relative">
-              <h3 className="absolute -top-3 left-4 bg-white px-2 text-sm font-semibold uppercase tracking-wide">
-                {otherTools.title}
-              </h3>
-              <ul className="space-y-2 text-neutral-600 pt-2">
-                {otherTools.items.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
+          </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
