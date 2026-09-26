@@ -1,12 +1,13 @@
 import { useRef, useEffect } from "react";
 
-export function useShrinkToFit({ maxFontSize = 24, minFontSize = 12 } = {}) {
+export function useShrinkToFit({ maxFontSize = 30, minFontSize = 18 } = {}) {
   const containerRef = useRef(null);
   const textRef = useRef(null);
 
   useEffect(() => {
     const container = containerRef.current;
     const text = textRef.current;
+    const resizeObserver = new ResizeObserver(fitText);
     if (!container || !text) return;
 
     function fitText() {
@@ -34,8 +35,9 @@ export function useShrinkToFit({ maxFontSize = 24, minFontSize = 12 } = {}) {
     }
 
     fitText();
-    window.addEventListener("resize", fitText);
-    return () => window.removeEventListener("resize", fitText);
+    resizeObserver.observe(container);
+
+    return () => resizeObserver.disconnect();
   }, [maxFontSize, minFontSize]);
 
   return { containerRef, textRef };

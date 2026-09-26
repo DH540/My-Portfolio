@@ -86,7 +86,7 @@ function Modal({ isOpen, content, onClose }) {
           )}
 
           {description && (
-            <p className="font-mono text-neutral-700 leading-relaxed mb-6">{description}</p>
+            <p className="font-mono text-neutral-700 text-justify leading-relaxed mb-6">{description}</p>
           )}
 
           {contributions.length > 0 && (
@@ -121,7 +121,7 @@ function Modal({ isOpen, content, onClose }) {
           <div>
             <p className="font-raleway font-semibold mb-3">Links</p>
 
-            {links?.live || links?.github || links?.docs || links?.figma ? (
+            {links?.live || links?.github || links?.docs ? (
               <div className="flex flex-wrap gap-2">
                 {links.live && (
                   <a href={links.live} target="_blank" rel="noopener noreferrer" className="border border-neutral-300 rounded-full px-4 py-2 text-sm font-mono text-neutral-600 bg-white hover:bg-neutral-900 hover:text-white transition-colors">

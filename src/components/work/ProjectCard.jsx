@@ -13,7 +13,7 @@ function ProjectCard({ project, onClick }) {
           {project.title}
         </h4>
       </div>
-      <p className="font-mono text-sm text-neutral-300 mt-2 line-clamp-3">{project.blurb}</p>
+      <p className="font-mono text-sm text-neutral-300 mt-2 line-clamp-3">{project.description}</p>
     </button>
   );
 }
