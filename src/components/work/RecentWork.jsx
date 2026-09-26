@@ -6,7 +6,7 @@ function RecentWork({ data }) {
           {data.tag}
         </span>
         <h1 className="text-2xl font-raleway font-bold mb-2">{data.title}</h1>
-        <p className="font-mono text-neutral-300 text-xl">{data.description}</p>
+        <p className="font-mono text-neutral-300 text-lg text-justify">{data.description}</p>
       </div>
       <div className="w-full md:w-80 h-40 bg-neutral-700 flex items-center justify-center text-neutral-400 text-sm shrink-0">
         {data.image ? (
