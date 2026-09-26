@@ -36,7 +36,7 @@ export const projects = [
     id: "project-3",
     title: "Eintstein's Memory Game: A Course Project",
     date: "Oct 2024 - Nov 2024",
-    description: "Put a sample project intro here",
+    description: "A Java-based memory game where players match pairs of cards within a limited time. The game features a 4×4 card grid, score tracking, timed gameplay, player feedback, and basic menu and audio controls.",
     roles: ["Project Manager", "Developer - Assets Integration"],
     contributions: 
     ["Sourced and organized the visual and audio assets used throughout the game.", 
