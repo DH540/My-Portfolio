@@ -11,7 +11,7 @@ export const projects = [
     roles: ["Game Designer", "Developer"],
     contributions: [],
     technologies: ["GDScript", "Godot", "Claude Code"],
-    links: null,
+    links: [],
     image: highwayImage,
   },
   {
@@ -25,11 +25,10 @@ export const projects = [
      "Led a development team in designing interactive system prototypes using Figma to define user workflows and webpage interactions.",
      "Integrated automated email notification workflows using EmailJS to facilitate communication between administrators and clients"],
     technologies: ["HTML", "CSS", "JavaScript", "EmailJS", "Figma", "Slack", "ChatGPT", "Google Workspace"],
-    links: {
-      live: "https://dh540.github.io/GPPB-MORS/",
-      github: "https://github.com/DH540/GPPB-MORS",
-      docs: null,
-    },
+    links: [
+      { label: "Live", url: "https://dh540.github.io/GPPB-MORS/" },
+      { label: "GitHub Repo", url: "https://github.com/DH540/GPPB-MORS"},
+    ],
     image: GPPBImage,
   },
   {
@@ -43,11 +42,9 @@ export const projects = [
      "Integrated the collected assets into the Java application to support the game's visual interface and audio experience", 
      "Tested and Documented the game's functionality and performance to ensure a smooth user experience"],
     technologies: ["Java", "ChatGPT"],
-    links: {
-      live: null,
-      github: "https://github.com/DH540/Einstein-s-Memory-Game",
-      docs: null,
-    },
+    links: [
+      { label: "GitHub Repo", url: "https://github.com/DH540/Einstein-s-Memory-Game"},
+    ],
     image: EMG,
   },
 ];

@@ -47,7 +47,7 @@ function Modal({ isOpen, content, onClose }) {
     description,
     contributions = [],
     technologies = [],
-    links,
+    links = [],
     image,
   } = content;
 
@@ -127,28 +127,19 @@ function Modal({ isOpen, content, onClose }) {
           <div>
             <p className="font-raleway font-semibold mb-3">Links</p>
 
-            {links?.live || links?.github || links?.docs ? (
+            {links.length > 0 ? (
               <div className="flex flex-wrap gap-2">
-                {links.live && (
-                  <a href={links.live} target="_blank" rel="noopener noreferrer" className="border border-neutral-300 rounded-full px-4 py-2 text-sm font-mono text-neutral-600 bg-white hover:bg-neutral-900 hover:text-white transition-colors">
-                    Live
+                {links.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-neutral-300 rounded-full px-4 py-2 text-sm font-mono text-neutral-600 bg-white hover:bg-neutral-900 hover:text-white transition-colors"
+                  >
+                    {link.label}
                   </a>
-                )}
-                {links.github && (
-                  <a href={links.github} target="_blank" rel="noopener noreferrer" className="border border-neutral-300 rounded-full px-4 py-2 text-sm font-mono text-neutral-600 bg-white hover:bg-neutral-900 hover:text-white transition-colors">
-                    GitHub Repo
-                  </a>
-                )}
-                {links.figma && (
-                  <a href={links.figma} target="_blank" rel="noopener noreferrer" className="border border-neutral-300 rounded-full px-4 py-2 text-sm font-mono text-neutral-600 bg-white hover:bg-neutral-900 hover:text-white transition-colors">
-                    Figma
-                  </a>
-                )}
-                {links.docs && (
-                  <a href={links.docs} target="_blank" rel="noopener noreferrer" className="border border-neutral-300 rounded-full px-4 py-2 text-sm font-mono text-neutral-600 bg-white hover:bg-neutral-900 hover:text-white transition-colors">
-                    Technical Documents
-                  </a>
-                )}
+                ))}
               </div>
             ) : (
               <p className="text-neutral-400 text-sm italic">Currently working on it</p>

@@ -1,6 +1,51 @@
 import { useEffect, useRef, useState } from "react";
 
 const LOGO_SIZE = 40; // must match the rendered image size (w-10 h-10 = 40px)
+const MIN_GAP = 12;
+const MAX_ATTEMPTS = 50;
+
+function getNonOverlappingPositions(count, width, height) {
+  const placed = [];
+  const minDist = LOGO_SIZE + MIN_GAP;
+
+  for (let i = 0; i < count; i++) {
+    let best = null;
+    let bestMinDist = -Infinity;
+
+    for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+      const candidate = {
+        x: Math.random() * Math.max(width - LOGO_SIZE, 1),
+        y: Math.random() * Math.max(height - LOGO_SIZE, 1),
+      };
+
+      // distance to closest already-placed logo
+      let closest = Infinity;
+      for (const p of placed) {
+        const dx = candidate.x - p.x;
+        const dy = candidate.y - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < closest) closest = dist;
+      }
+      if (placed.length === 0) closest = Infinity;
+
+      // good enough, use it right away
+      if (closest >= minDist) {
+        best = candidate;
+        break;
+      }
+
+      // otherwise keep the least-overlapping candidate as fallback
+      if (closest > bestMinDist) {
+        bestMinDist = closest;
+        best = candidate;
+      }
+    }
+
+    placed.push(best);
+  }
+
+  return placed;
+}
 
 function BouncingLogos({ items }) {
   const containerRef = useRef(null);
@@ -40,9 +85,15 @@ function BouncingLogos({ items }) {
 
     updateDimensions();
 
-    positionsRef.current = items.map(() => ({
-      x: Math.random() * Math.max(dimensionsRef.current.width - LOGO_SIZE, 1),
-      y: Math.random() * Math.max(dimensionsRef.current.height - LOGO_SIZE, 1),
+    const spawnPositions = getNonOverlappingPositions(
+      items.length,
+      Math.max(dimensionsRef.current.width, 1),
+      Math.max(dimensionsRef.current.height, 1)
+    );
+
+    positionsRef.current = items.map((_, index) => ({
+      x: spawnPositions[index].x,
+      y: spawnPositions[index].y,
       vx: (Math.random() > 0.5 ? 1 : -1) * speed,
       vy: (Math.random() > 0.5 ? 1 : -1) * speed,
       paused: false,
