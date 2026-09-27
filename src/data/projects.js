@@ -44,6 +44,7 @@ export const projects = [
     technologies: ["Java", "ChatGPT"],
     links: [
       { label: "GitHub Repo", url: "https://github.com/DH540/Einstein-s-Memory-Game"},
+      { label: "Video Demo", url: "https://drive.google.com/file/d/15B_4qjgqJRCtYH0_FU67DRWPMvouDJLt/view?usp=sharing"},
     ],
     image: EMG,
   },
