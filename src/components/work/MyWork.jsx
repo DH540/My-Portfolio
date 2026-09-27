@@ -30,6 +30,16 @@ function MyWork({ onProjectClick }) {
               <ProjectCard key={project.id} project={project} onClick={onProjectClick} />
             ))}
           </div>
+          <div className="text-center mt-6">
+            <a
+              href="https://github.com/DH540"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white text-sm underline underline-offset-4 transition-colors"
+            >
+              View More Projects →
+            </a>
+          </div>
         </div>
 
         {/* Certifications */}

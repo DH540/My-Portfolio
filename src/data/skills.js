@@ -3,6 +3,9 @@ export const skillCategories = [
     id: "project-management",
     title: "Project Management",
     items: [
+      "Agile",
+      "Scrum",
+      "Software Testing (Agile-Based)",
       "Project Coordination",
       "Stakeholder Communication",
       "Cross-functional Coordination",
@@ -20,20 +23,12 @@ export const skillCategories = [
         logo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/960px-Godot_icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20170822201738",
       },
       {
-        name: "SQL",
-        logo: "https://cdn.simpleicons.org/mysql",
-      },
-      {
         name: "Java",
         logo: "https://static.vecteezy.com/system/resources/previews/048/332/150/non_2x/java-programming-language-java-logo-free-png.png",
       },
       {
         name: "Python",
         logo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
-      },
-      {
-        name: "C++",
-        logo: "https://cdn.simpleicons.org/cplusplus",
       },
       {
         name: "Git",
