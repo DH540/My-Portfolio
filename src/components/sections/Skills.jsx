@@ -3,7 +3,7 @@ import BouncingLogos from "../skills/BouncingLogos";
 
 function Skills() {
   const projectMgmt = skillCategories.find((c) => c.id === "project-management");
-  const technicalTools = skillCategories.find((c) => c.id === "technical-tools");
+  const technicalExperience = skillCategories.find((c) => c.id === "technical-exp");
 
   return (
     <section id="skills" className="bg-white text-neutral-900 px-6 py-20">
@@ -35,10 +35,10 @@ function Skills() {
           {/* Right column: Technical Tools*/}
           <div className="border border-neutral-300 p-6 relative h-full">
             <h3 className="absolute -top-3 left-4 bg-white px-2 text-sm font-mono font-semibold uppercase tracking-wide">
-              {technicalTools.title}
+              {technicalExperience.title}
             </h3>
             <div className="h-64">
-              <BouncingLogos items={technicalTools.items} />
+              <BouncingLogos items={technicalExperience.items} />
             </div>
           </div>
           </div>

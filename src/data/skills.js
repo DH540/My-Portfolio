@@ -12,11 +12,11 @@ export const skillCategories = [
     ],
   },
   {
-    id: "technical-tools",
-    title: "Technical Tools",
+    id: "technical-exp",
+    title: "Technical Experience",
     items: [
       {
-        name: "Godot",
+        name: "Godot / GDScript",
         logo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/960px-Godot_icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20170822201738",
       },
       {
@@ -77,7 +77,7 @@ export const skillCategories = [
       },
       {
         name: "Figma",
-        logo: "https://cdn.simpleicons.org/figma",
+        logo: "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-avatar/avatars/figma.webp",
       },
       {
         name: "Vercel",
@@ -90,6 +90,14 @@ export const skillCategories = [
       {
         name: "Claude Code",
         logo: "https://cdn.simpleicons.org/claude",
+      },
+      {
+        name: "Slack",
+        logo: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1280px-Slack_icon_2019.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      },
+      {
+        name: "EmailJS",
+        logo: "https://www.emailjs.com/logo.png",
       },
     ],
   }

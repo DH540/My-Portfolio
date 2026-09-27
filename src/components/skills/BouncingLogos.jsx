@@ -63,7 +63,7 @@ function BouncingLogos({ items }) {
     if (!containerRef.current) return;
 
     const container = containerRef.current;
-    const speed = 0.7;
+    const speed = 0.5;
 
     const updateDimensions = () => {
       const width = container.clientWidth;
