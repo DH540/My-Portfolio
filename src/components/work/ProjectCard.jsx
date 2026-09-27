@@ -6,7 +6,7 @@ function ProjectCard({ project, onClick }) {
   return (
     <button
       onClick={() => onClick(project)}
-      className="border border-neutral-500 text-left p-4 aspect-square flex flex-col justify-between hover:bg-white hover:text-neutral-900 transition-colors"
+      className="border border-neutral-500 text-left p-4 aspect-square flex flex-col justify-between hover:bg-white hover:text-neutral-900 transition-colors cursor-pointer"
 >
        <div>
           <div ref={containerRef} className="h-30 overflow-hidden flex items-start">
